@@ -1,0 +1,38 @@
+<%- include('parts/header.ejs') %>
+
+     <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <h2 class="heading-display section-title">Our Collections</h2>
+                    <p class="text-body section-subtitle">
+                        Discover pieces crafted for every chapter of your story
+                    </p>
+                </div>
+                <a href="#" class="btn-text">View All Collections</a>
+            </div>
+            <% for (let ele of resProduct) { %>
+            <div class="collections-grid">
+                <div class="collection-item">
+                    <div class="collection-image">
+                        <img src="image/<%= ele.image %>" 
+                             alt="<%= ele.category %>">
+                    </div>
+                    <div class="collection-overlay">
+                        <h3 class="collection-name"><%= ele.name %></h3>
+                        <p class="collection-count"><%= ele.description %></p>
+                    </div>
+                </div>
+                <% } %>
+              
+                
+               
+               
+                
+              
+            </div>
+        </div>
+    </section>  
+    <script src="js/main.js"></script>
+
+<%- include('parts/footer.ejs') %>

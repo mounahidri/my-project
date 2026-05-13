@@ -1,0 +1,42 @@
+<%- include('parts/header.ejs') %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form style="width: 30%;margin-left: auto;margin-right: auto;" action:"/register" method:"post">
+    <div class="form-group" >
+   <label class="form-label" for="name">Full Name</label>
+    <input type="name" id="name" name="name" class="form-input" required>
+  </div>
+   <div class="form-group">
+   <label class="form-label" for="phone">Phone Number</label>
+    <input type="number" id="phone" name="phone" class="form-input" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="email">Email Address</label>
+    <input type="email" id="email" name="email" class="form-input" placeholder="Enter email" required>
+    
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="password">Password</label>
+    <input type="password" id="password" name="password" class="form-input" placeholder="Password" required> 
+  </div>
+  
+  <button type="submit" class="btn btn-primary"style="margin-left: 75px;">Sign in</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<%- include('parts/footer.ejs') %>

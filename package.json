@@ -1,5 +1,5 @@
 {
-  "name": "jewelryproject",
+  "name": "car-project",
   "version": "1.0.0",
   "description": "",
   "license": "ISC",
@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "ejs": "^5.0.2",
     "express": "^5.2.1",
     "mongoose": "^9.6.1",

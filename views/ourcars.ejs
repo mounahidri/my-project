@@ -1,0 +1,43 @@
+<%- include('parts/header.ejs') %>
+
+   <!-- Collections -->
+    <section class="collections" id="collections">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-header-left">
+                    <h2 class="heading-display section-title">Our Collections</h2>
+                    <p class="text-body section-subtitle">
+                        Discover pieces crafted for every chapter of your story
+                    </p>
+                </div>
+                <a href="#" class="btn-text">View All Collections</a>
+            </div>
+            
+            <div class="collections-grid">
+              <% for (ele of results) {  %>
+
+              
+                <div class="collection-item">
+                    <div class="collection-image">
+                        <a href="/ourcars/cardetails/<%= ele._id %>"><img src="/image/<%= ele.image %>" 
+                             alt="<%= ele.marque %>"></a>
+                    </div>
+                    <div class="collection-overlay">
+                        <h3 class="collection-name"><%= ele.marque %></h3>
+                        <p class="collection-count"><%= ele.modele %></p>
+                        
+                    </div>
+                </div>
+
+                <% } %>
+               
+                
+                
+               
+            </div>
+        </div>
+    </section>
+     
+    <script src="js/main.js"></script>
+
+<%- include('parts/footer.ejs') %>

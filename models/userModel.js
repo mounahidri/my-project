@@ -1,12 +1,16 @@
 const mongoose=require("mongoose");
-const userSchema=mongoose.schema({
+const userSchema=mongoose.Schema({
     name:{
         type:String,
         required:true,
         trim:true
     },
+    phone: {
+          type: String,
+          trim: true
+    },
     email:{
-        typr:String,
+        type:String,
         required:true,
         trim:true,
         unique:true

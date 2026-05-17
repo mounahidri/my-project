@@ -1,5 +1,5 @@
 <%- include('parts/header.ejs') %>
-   <!-- Craftsmanship -->
+   <!-- car details -->
     <section class="craftsmanship" id="craftsmanship">
         <div class="container">
             <div class="craft-grid">
@@ -10,25 +10,22 @@
                     <h2 class="heading-display craft-title">
                         L'élégance en mouvement.
                     </h2>
-                     
+                    
                     <p class="text-body craft-text">
-                       La mercedes benz c-class est une berline de luxe compacte, souvent décrite comme une « mini Classe S » 
-                       en raison de son haut niveau de raffinement technologique et de confort. 
-                       Elle se positionne comme une référence premium,
-                        alliant élégance, sportivité et innovations numériques.
+                      <%= details.description %>
                     </p>
                     <ul class="craft-list text-body">
                         
-                        <li>2021</li>
-                        <li>white</li>
-                    <li>110.000 Dt</li>
+                        <li><%= details.annee %></li>
+                        <li><%= details.color %></li>
+                    <li><%= details.price %>Dt</li>
                     </ul>
                    
                     <a href="/contact" class="btn-primary">Commission a Custom Piece</a>
                 </div>
                 <div class="craft-image-wrapper">
                     <div class="craft-image">
-                        <img src="/image/img8.jpg" 
+                        <img src="/image/<%= details.image %>" 
                              alt="">
                     </div>
                     <div class="craft-stats">
@@ -44,6 +41,7 @@
                             <p class="stat-number">Consommation</p>
                             <p class="stat-label">6.9 L/100 Km</p>
                         </div>
+                      
                     </div>
                 </div>
             </div>

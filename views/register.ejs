@@ -9,14 +9,14 @@
 <br>
 <br>
 
-<form style="width: 30%;margin-left: auto;margin-right: auto;" action:"/register" method:"post">
+<form style="width: 30%;margin-left: auto;margin-right: auto;" action="/register" method="post">
     <div class="form-group" >
    <label class="form-label" for="name">Full Name</label>
     <input type="name" id="name" name="name" class="form-input" required>
   </div>
    <div class="form-group">
    <label class="form-label" for="phone">Phone Number</label>
-    <input type="number" id="phone" name="phone" class="form-input" required>
+    <input type="text" id="phone" name="phone" class="form-input" required>
   </div>
   <div class="form-group">
     <label class="form-label" for="email">Email Address</label>
@@ -29,6 +29,11 @@
   </div>
   
   <button type="submit" class="btn btn-primary"style="margin-left: 75px;">Sign in</button>
+
+  <% if (error_msg.length > 0) {  %>
+     <p style="color:red; text-align:center;"><%= error_msg %></p>
+     <% } %>
+
 </form>
 <br>
 <br>

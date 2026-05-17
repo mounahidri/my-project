@@ -26,13 +26,31 @@ https://templatemo.com/tm-611-maison-doree
             <a href="#" class="logo">TOP<span>MOTORS</span></a>
                 
                 <nav class="nav-main">
-                    <a href="#">Home</a>
-                    <a href="#">Our Cars</a>
-                    <a href="#craftsmanship">Car Details</a>
-                    <a href="#story">Featured Cars</a>
-                    <a href="#contact">Contact</a>
-                    <a href="register">Register</a>
-                    <a href="login">Login</a>
+                    <a href="/home">Home</a>
+
+                     <% if(user){ %>
+
+                    <a href="/ourcars">Our Cars</a>
+
+                       <%   }     %>
+
+                    <a href="/cardetails">Car Details</a>
+                    <a href="/featuredcars">Featured Cars</a>
+                    <a href="/contact">Contact</a>
+                    <a href="/register">Register</a>
+
+               
+
+                     <% if(!user) { %>
+                    <a href="/login">Login</a>  
+
+                        <% } %>
+
+                    
+
+                        <% if(user) { %>
+                     <a href="/logout">Logout</a>    
+                        <% } %>
                 </nav>
                 
                 <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">

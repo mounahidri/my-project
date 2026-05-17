@@ -4,6 +4,6 @@ const carController=require("../controllers/carController.js");
 
 router.get("/", carController.getAllCars);
 
-router.get("/cardetails/:id", carController.getOneCar);
+router.get("/:id", carController.getOneCar);
 
 module.exports=router;

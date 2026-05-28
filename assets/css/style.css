@@ -581,6 +581,7 @@ label{
 	padding: var(--space-md);
 	opacity: 0;
 	transition: opacity 0.4s ease;
+	pointer-events: none;
 }
 
 .collection-item:hover .collection-overlay {
@@ -1266,6 +1267,11 @@ label{
 	.hero-image-overlay {
 		display: none;
 	}
+	.collection-image a {
+    display: block; /* Permet au lien d'occuper l'espace */
+    position: relative;
+    z-index: 999; /* Place le lien au-dessus des autres éléments */
+}
 
 	.featured-grid,
 	.story-grid,
@@ -1351,6 +1357,7 @@ label{
 
 	.collection-overlay {
 		opacity: 1;
+		
 	}
 
 	.story-images {
@@ -1506,3 +1513,8 @@ div img{
 	margin: 2px;
 	width: 250px;
 }
+
+
+
+
+

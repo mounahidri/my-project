@@ -1,3 +1,4 @@
+
 <%- include('parts/header.ejs') %>
    <!-- car details -->
     <section class="craftsmanship" id="craftsmanship">
@@ -31,15 +32,15 @@
                     <div class="craft-stats">
                         <div class="stat-item">
                             <p class="stat-number">Moteur</p>
-                            <p class="stat-label">4 cylindres 2.0 L Turbo</p>
+                            <p class="stat-label"><%= details.moteur %></p>
                         </div>
                         <div class="stat-item">
                             <p class="stat-number">Performance</p>
-                            <p class="stat-label">201 à 254 chevaux </p>
+                            <p class="stat-label"><%= details.performance %> </p>
                         </div>
                         <div class="stat-item">
                             <p class="stat-number">Consommation</p>
-                            <p class="stat-label">6.9 L/100 Km</p>
+                            <p class="stat-label"><%= details.consommation %></p>
                         </div>
                       
                     </div>

@@ -1,0 +1,84 @@
+<%- include('parts/header.ejs') %>
+
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<form style="width: 30%;    margin-left: auto;margin-right: auto;" action="/collections/addnewcars" method="post" enctype="multipart/form-data">
+  <div class="form-group" >
+   <label class="form-label" for="marque">Marque</label>
+    <input type="name" id="name" name="marque" class="form-input" required>
+  </div>
+   <div class="form-group">
+   <label class="form-label" for="modele">Modele</label>
+    <input type="text" id="phone" name="modele" class="form-input" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="price">Price</label>
+    <input type="number" id="price" name="price" class="form-input"  required>
+    
+  </div>
+ 
+  <div class="form-group">
+    <label class="form-label" for="image">Image</label>
+    <input type="file" id="image" name="image" class="form-input"  required> 
+  </div>
+   <div class="form-group">
+    <label class="form-label" for="annee">Annee</label>
+    <input type="text" id="annee" name="annee" class="form-input" required> 
+  </div>
+   <div class="form-group">
+    <label class="form-label" for="color">Color</label>
+    <input type="text" id="color" name="color" class="form-input"  required> 
+  </div>
+  
+    <div class="form-group">
+    <label class="form-label" for="moteur">Moteur</label>
+    <input type="text" id="moteur" name="moteur" class="form-input"  required> 
+  </div>
+   <div class="form-group">
+    <label class="form-label" for="performance">performance</label>
+    <input type="text" id="performance" name="performance" class="form-input" required> 
+  </div>
+   <div class="form-group">
+    <label class="form-label" for="consommation">Consommation</label>
+    <input type="text" id="consommation" name="consommation" class="form-input"  required> 
+  </div>
+   <div class="form-group">
+    <label class="form-label" for="description">Description</label>
+    <input type="text" id="description" name="description" class="form-input"  required> 
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary"style="margin-left: 75px;">ADD</button>
+</div>
+
+
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+<%- include('parts/footer.ejs') %>

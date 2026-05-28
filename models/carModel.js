@@ -7,7 +7,10 @@ const carSchema=mongoose.Schema({
     image:String,
     annee:Number,
     color:String,
-    description:String
+    description:String,
+    moteur:String,
+    performance:String,
+    consommation:String
    
 })
 

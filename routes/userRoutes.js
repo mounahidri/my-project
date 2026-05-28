@@ -7,7 +7,7 @@ router.post("/register",userController.userRegister);
 router.post("/login",userController.userLogin);
 router.get("/logout",(req,res)=>{
     req.session.destroy();
-    res.clearCookie("connect.sid");
+    // res.clearCookie("connect.sid");
     res.redirect("/login");
 })
 

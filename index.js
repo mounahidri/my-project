@@ -2,9 +2,11 @@ const express=require("express");
 const app=express();
 const path=require("path");
 const connectDb = require("./config/db");
+
 const carRoutes=require("./routes/carRoutes.js");
 const userRoutes=require("./routes/userRoutes.js");
 const flash=require("connect-flash")
+const car=require("./models/carModel");
 const session=require("express-session")
 // body parser
 app.use(express.urlencoded({ extended: true }));
@@ -50,31 +52,35 @@ app.get("/",(req,res)=>{
     res.render("index")
 })
 
+app.get("/addnewcars",(req,res)=>{
+    res.render("addnewcars")
+})
 
 app.get("/home",(req,res)=>{
     res.render("home")
 })
 
 
-// app.get("/ourcars",(req,res)=>{
-//     res.render("ourcars")
+// app.get("/collections",(req,res)=>{
+//     res.render("collections")
 // })
 
 
 app.use("/",userRoutes);
 
-app.use("/ourcars",carRoutes);
+app.use("/collections",carRoutes);
 
 
 
-app.get("/cardetails",(req,res)=>{
-    res.render("cardetails")
-})
+// app.get("/cardetails",(req,res)=>{
+//     res.render("cardetails")
+// })
 
 
 
-app.get("/featuredcars",(req,res)=>{
-    res.render("featuredcars")
+app.get("/inventory",async(req,res)=>{
+    const cars= await car.find({});
+    res.render("inventory",{cars});
 })
 
 app.get("/contact",(req,res)=>{
